@@ -1,0 +1,6 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/mnt/c/Users/victo/OneDrive/MyDocs/curriculum/git/cv'
+tsc ./ts/*
+mv ./ts/*.js ./js
+make: Leaving directory '/mnt/c/Users/victo/OneDrive/MyDocs/curriculum/git/cv'
+ 
