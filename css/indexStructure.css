@@ -1,0 +1,81 @@
+/**Letras*/
+h1, h2, h3, h4, p, a{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+}
+h1{
+    font-size: 30px;
+    margin-top: 30px;
+    margin-bottom: 0px;
+}
+h2{
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+h3{
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+h4{
+    font-size: 16px;
+}
+
+p{
+    margin-bottom: 5px;
+}
+
+/*Estructura*/
+*{
+	padding:0px;
+	margin: 0px;
+}
+header{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+    align-items: center;
+    height: 50px;
+}
+
+.navEl{
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+#langIcon{
+    width: 40px;
+}
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 90%;
+    margin-left: 5%;
+}
+
+section{
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    min-height: 150px;
+    min-width: 300px;
+    max-width: 700px;
+}
+
+.li_redesSociales{
+    margin-left: 20px;
+}
+
+.li_experiencia{
+    margin-left: 20px;
+}

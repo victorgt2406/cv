@@ -1,0 +1,43 @@
+var LangES = {
+    "lang": "ES",
+    "titulo": "Ingeniero de Software en formación",
+    "edad":"Edad",
+    "anios":"años",
+    "meses":"meses",
+    "dias":"dias",
+    "birthDay":"Hoy es mi cumple!!!",
+    "ESP":"España",
+    "EEUU":"Estados Unidos",
+    "espaniol":"español",
+    "ingles":"inglés",
+    "nativo":"nativo",
+    "redes":"redes",
+    "patrones":"patrones de diseño Software",
+    "bachillerato":"bachillerato",
+    "universidad":"universidad",
+    "primerCurso":"primer curso",
+    "segundoCurso":"segundo curso",
+    "linkedin":"https://www.linkedin.com/in/victorgutierreztovar/",
+    "perfil":"Perfil",
+    "presentacion":"Estudiante de Ingeniería de Software en la universidad U-tad, en Madrid.",
+    "acercaDe":`Desde pequeño me apasiona el mundo de la tecnología.
+    Sobre todo,el mundo del ordenador, donde me gusta estar al dia de las nuevas tecnologías hardware y software.
+    Me encanta practicar deportes, jugar a videojuegos, aprender y utilizar el conocimiento de la programación para 
+    hacerme mis propios programas.
+    `,
+    "datosPersonales":"Datos personales",
+    "fechaDeNacimento":"Fecha de nacimiento",
+    "localidad":"Localidad",
+    "redesSociales":"Redes sociales",
+    "competencias": "Competencias",
+    "lengProg": "Lenguajes de programación",
+    "goodSkills": "Destaco",
+    "midSkills": "Nivel medio",
+    "basicSkills": "Nivel básico",
+    "experiencia":"Experiencia laboral",
+    "noExperienciaComp":"No tengo experiencia laboral.",
+    "noExperienciaLabor":"Busco con mucho animo empezar en este mundo.",
+    "proyectos":"Proyectos",
+    "formacion":"Formación",
+    "certificados":"Certificados"
+};

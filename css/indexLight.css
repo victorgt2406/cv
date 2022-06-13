@@ -1,0 +1,24 @@
+body{
+    background-color: rgb(255, 255, 255);
+}
+h1, h2, h3, h4, p{
+    color: #000000;
+}
+a{
+    color:#1e00e1
+}
+h1{
+    color:#0f006d
+}
+header{
+    background-color: #D8EAFF;
+}
+nav{
+    background-color: #e2e2e2;
+}
+section{
+    background-color: #D6D8FF;
+}
+#Perfil{
+    background-color: #D6FFDD;
+}
