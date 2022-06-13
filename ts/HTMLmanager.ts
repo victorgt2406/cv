@@ -15,4 +15,8 @@ class HTMLmanager{
     static createImg(src:string, alt:string, style:string):string{
         return `<img src = "`+src+`" alt = "`+alt+`" class = "`+style+`">`;
     }
+
+    static createInput(type:string, value:string, style:string):string{
+        return `<input type = "`+type+`" value = "`+value+`" class = "`+style+`">`;
+    }
 }

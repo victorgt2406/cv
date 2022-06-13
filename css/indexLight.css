@@ -16,9 +16,25 @@ header{
 nav{
     background-color: #e2e2e2;
 }
-section{
+section, .aside_element{
     background-color: #D6D8FF;
 }
+section:hover, .aside_element:hover{
+    background-color: #a3a8ff;
+}
+
 #Perfil{
     background-color: #D6FFDD;
+}
+.div_socialMedia, .div_levelPercentage, .div_courses_vis{
+    background-color: #dedede;
+}
+.div_level{
+    background-color: #00ff66;
+}
+.div_skill_group, .div_grade_title{
+    background-color: #f0f0f0;
+}
+.div_grade_title:hover{
+    background-color: #D6D8FF;
 }

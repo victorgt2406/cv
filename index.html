@@ -12,54 +12,42 @@
 		<meta charset="utf-8">
 		<link href="css/indexLight.css" rel="stylesheet" type="text/css">
 		<link href="css/indexStructure.css" rel="stylesheet" type="text/css">
-		<script src="lang/LangEn.js" type="text/javascript"></script>
-		<script src="lang/LangES.js" type="text/javascript"></script>
+		<script src="js/DarkMode.js" type="text/javascript"></script>
+		<script src="js/HTMLmanager.js" type="text/javascript"></script>
+		<script src="js/Language.js" type="text/javascript"></script>
+		<script src="js/Age.js" type="text/javascript"></script>
+		<script src="js/Section.js" type="text/javascript"></script>
+		<script src="js/Aside.js" type="text/javascript"></script>
+		<script src="js/Pefil.js" type="text/javascript"></script>
+		<script src="js/DatosPersonales.js" type="text/javascript"></script>
+		<script src="js/Competencias.js" type="text/javascript"></script>
+		<script src="js/Formacion.js" type="text/javascript"></script>
+		<script src="js/Sections.js" type="text/javascript"></script>
+		<script src="js/Asides.js" type="text/javascript"></script>
 		<script src="js/index.js" type="text/javascript"></script>
-		<script src="data/Data.js" type="text/javascript"></script>
-		<script src="js/age.js" type="text/javascript"></script>
-		<script src="js/darkMode.js" type="text/javascript"></script>
-		<script src="js/loadData.js" type="text/javascript"></script>
 		<link rel="icon" href="imagen.jpg" type="image/gif">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Víctor Gutiérrez Tovar</title>
 	</head>
-	<body onload="bodyOnload()">
+	<body onload="start()">
 		<header>
 			<h1>Víctor Gutiérrez Tovar</h1>
 			<h3 id="Title"></h3>
 		</header>
 		<nav>
 			<div class="navEl">
-				<input type="button" id="btnDarkMode" onclick="setDarkMode()" value ="Dark Mode">
+				<input type="button" id="btnDarkMode" onclick="darkMode.setDarkMode()" value ="Dark Mode">
 			</div>
 			<div class="navEl">
-				<img id="langIcon" src="img/lang/EN.png" onclick="changeLang()">
+				<img id="langIcon" src="img/lang/ES.png" onclick="changeLang()">
 			</div>
 		</nav>
-		<main>
-			<!--<h4 id="Edad"></h4>-->
-			<section id="Perfil">
-			</section>
-			<section id="DatosPesonales">
-			</section>
-			<section id="Competencias">
-			</section>
-			<section id="Experiencia">
-			</section>
-			<section id="Proyectos">
-			</section>
-			<section id="Formacion">
-			</section>
-			<section id="Certificados">
-			</section>
-		</main>
-		<aside>
-			<!--DONDE ESTA LA PUBLICIDAD Y OTRAS COSAS-->
-		</aside>
-		<footer>
-			<div id="Contacto">
-				<div id="Email"></div>
-			</div>
-		</footer>
+		<div id="main_aside">
+			<main id="Main">
+			</main>
+			<aside id="Aside">
+				<!--DONDE ESTA LA PUBLICIDAD Y OTRAS COSAS-->
+			</aside>
+		</div>
 	</body>
 </html>

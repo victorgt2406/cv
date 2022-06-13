@@ -1,9 +1,10 @@
-var lang;
-var asides;
-var sections;
-var darkMode;
-var elements;
-function start() {
+var lang:Language;
+var asides: Asides;
+var sections:Sections;
+var darkMode:DarkMode;
+var elements:Elements[];
+
+function start(){
     lang = autoLang();
     sections = new Sections();
     asides = new Asides();
@@ -11,8 +12,9 @@ function start() {
     elements = [sections, asides];
     loadLang();
 }
-function autoLang() {
-    var lang;
+
+function autoLang(): Language {
+    var lang:Language;
     var userLang = navigator.language;
     if (userLang == "es") {
         lang = Language.ES;
@@ -22,6 +24,7 @@ function autoLang() {
     }
     return lang;
 }
+
 function changeLang() {
     if (lang == Language.EN) {
         lang = Language.ES;
@@ -31,20 +34,21 @@ function changeLang() {
     }
     loadLang();
 }
+
 function loadLang() {
     var strLang = "ES";
     if (lang === Language.EN) {
         strLang = "EN";
     }
-    for (var i = 0; i < elements.length; i++) {
-        if (lang === Language.EN) {
+    for(var i=0; i<elements.length; i++){
+        if (lang === Language.EN){
             elements[i].langEN();
         }
-        else {
+        else{ 
             elements[i].langES();
         }
         elements[i].loadInHtml();
     }
     //Change icon flag
-    document.getElementById("langIcon").setAttribute("src", "img/lang/" + strLang + ".png");
+    document.getElementById("langIcon")!.setAttribute("src", "img/lang/" + strLang + ".png");
 }

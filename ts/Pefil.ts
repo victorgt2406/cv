@@ -5,6 +5,9 @@ abstract class Perfil extends NormalSection{
 }
 
 class Perfil_ES extends Perfil{
+    constructor(short:boolean){
+        super(short);
+    }
     getTitle(): string {
         return "Perfil";
     }
@@ -23,6 +26,9 @@ class Perfil_ES extends Perfil{
 }
 
 class Perfil_EN extends Perfil{
+    constructor(short:boolean){
+        super(short);
+    }
     getTitle(): string {
         return "Profile";
     }
@@ -33,9 +39,7 @@ class Perfil_EN extends Perfil{
         return this.shortVersion() + HTMLmanager.insideLabels(this.text(),"p","");
     }
     private text():string{
-        return ("Desde pequeño me apasiona el mundo de la tecnología. "+
-        "Sobre todo,el mundo del ordenador, donde me gusta estar al dia de las nuevas tecnologías hardware y software. "+
-        "Me encanta practicar deportes, jugar a videojuegos, aprender y utilizar el conocimiento de la programación para "+
-        "hacerme mis propios programas.");
+        return ("Since I was a child, I was very interested in tecnology. Farther more in computers, where I tend to be update about the new hardware,"
+        +"and software technologies. I love sports, play videogames and learn to then use that knowledge to do cool things with it");
     }
 }

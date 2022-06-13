@@ -1,6 +1,6 @@
-abstract class DatosPersonales extends Aside {
-    constructor(lang){
-        super();
+abstract class DatosPersonales extends NormalSection {
+    constructor(short:boolean, lang){
+        super(short);
         this.lang = lang;
         this.socialMedia = [
             {
@@ -65,6 +65,14 @@ abstract class DatosPersonales extends Aside {
         return HTMLmanager.insideLabels(socials, "div", 'class ="socialMedia_large"');
     }
 
+    private getSocialMediaShort(): string {
+        var socials = "";
+        for (var i = 0; i < this.socialMedia.length; i++) {
+            socials += this.getSocialMediaIconLink(this.socialMedia[i]);
+        }
+        return HTMLmanager.insideLabels(socials, "div", 'class ="socialMedia_short"');
+    }
+
     getSocialMediaIconLink(socialMedia): string {
         return HTMLmanager.insideLabels(HTMLmanager.createImg(socialMedia.src, socialMedia.nombre, "img_social"), "a"
             , `href="` + socialMedia.link + `" target="_blank" onclick="sections.` + this.getHtmlId() + `.changeVersion()"`);
@@ -72,6 +80,7 @@ abstract class DatosPersonales extends Aside {
 
     public getEmailCopy(): void {
         navigator.clipboard.writeText(this.getEmail());
+        this.changeVersion();
     }
 
     private getEmail(): string {
@@ -86,13 +95,24 @@ abstract class DatosPersonales extends Aside {
         return Age.getInstance();
     }
 
+    private getAge(): string {
+        return this.getLang().age + ": " + this.getAgeObj().getAge() + " " + this.getLang().years;
+    }
+
     private getFullAge() {
         return this.getLang().age + ": " + this.getAgeObj().getAge() + " " + this.getLang().years
             + ", " + this.getAgeObj().getMonthOld() + " " + this.getLang().months
             + ", " + this.getAgeObj().getDayOld() + " " + this.getLang().days;
     }
-    
-    getContent(): string {
+
+    shortVersion(): string {
+        var birthday = HTMLmanager.insideLabels(this.getLang().birthDate, "p", "");
+        var age = HTMLmanager.insideLabels(this.getAge(), "p", "");
+        var email = HTMLmanager.insideLabels(this.getEmailText(), "p", "");
+        var socialMedia = HTMLmanager.insideLabels(this.getLang().socialMedia, "p", "") + this.getSocialMediaShort();
+        return age + birthday + socialMedia + email;
+    }
+    largeVersion(): string {
         var birthday = HTMLmanager.insideLabels(this.getLang().birthDate, "p", "");
         var age = HTMLmanager.insideLabels(this.getFullAge(), "p", "");
         var email = HTMLmanager.insideLabels(this.getEmailText(), "p", "");
@@ -103,7 +123,7 @@ abstract class DatosPersonales extends Aside {
 }
 
 class DatosPersonales_ES extends DatosPersonales {
-    constructor() {
+    constructor(short: boolean) {
         var lang: { title: string; age: string; years: string; months: string; days: string; birthDate: string; socialMedia: string; linkedinLink: string; location: string; } = {
             title: "Datos personales",
             years: "años",
@@ -115,12 +135,12 @@ class DatosPersonales_ES extends DatosPersonales {
             linkedinLink: "https://www.linkedin.com/in/victorgutierreztovar/",
             location: "Localización: Madrid, España"
         };
-        super(lang);
+        super(short,lang);
     }
 }
 
 class DatosPersonales_EN extends DatosPersonales {
-    constructor() {
+    constructor(short: boolean) {
         var lang: { title: string; age: string; years: string; months: string; days: string; birthDate: string; socialMedia: string; linkedinLink: string; location: string; } = {
             title: "Personal data",
             years: "years",
@@ -132,6 +152,6 @@ class DatosPersonales_EN extends DatosPersonales {
             linkedinLink: "https://www.linkedin.com/in/victorgutierreztovar/?locale=en_US",
             location: "Location: Madrid, Spain"
         };
-        super(lang);
+        super(short,lang);
     }
 }
