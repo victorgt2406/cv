@@ -1,1 +1,0 @@
-Icons downloaded in https://www.flaticon.es/packs/countrys-flags by By Freepik: https://www.freepik.com/
